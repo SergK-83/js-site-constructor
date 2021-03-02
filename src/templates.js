@@ -8,16 +8,19 @@ function title(block) {
 }
 
 function text(block) {
-    return row(col(`<p>${block.value}</p>`));
+    const styles = block.options.styles;
+    return row(col(`<p>${block.value}</p>`), css(styles));
 }
 
 function columns(block) {
+    const styles = block.options.styles;
     const html = block.value.map(col).join('');
-    return row(html);
+    return row(html, css(styles));
 }
 
 function image(block) {
-    return row(`<img src="${block.value}" alt="">`);
+    const {styles, alt = '', stylesImg: imgCss} = block.options
+    return row(`<img src="${block.value}" alt="${alt}" style = "${css(imgCss)}">`, css(styles));
 }
 
 export const templates = {

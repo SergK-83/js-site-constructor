@@ -14,20 +14,29 @@ export const model = [
 			}
 		}
 	},
-	{type: 'text', value: 'Here we go with some text'},
+	{
+		type: 'text',
+		value: 'Here we go with some text',
+		options: {
+			styles: {
+				padding: '1rem',
+				color: '#777'
+			}
+		}
+	},
 	{
 		type: 'columns',
-      value: [
-          'Приложение на чистом JavaScript',
-          'Принципы SOLID и ООП в JavaScript в одном курсе',
-          'JavaScript - это очень интересно'
-      ],
-      options: {
-		    styles: {
-		        padding: '2rem',
-            'font-weight': 'bold'
-        }
-      }
+		value: [
+			'Приложение на чистом JavaScript',
+			'Принципы SOLID и ООП в JavaScript в одном курсе',
+			'JavaScript - это очень интересно'
+		],
+		options: {
+			styles: {
+				padding: '1rem',
+				'font-weight': 'bold',
+			}
+		}
 	},
 	{
 		type: 'image',
@@ -36,8 +45,12 @@ export const model = [
 			styles: {
 				display: 'flex',
 				'justify-content': 'center',
-				padding: '2rem 0'
-			}
+				padding: '1rem'
+			},
+			stylesImg: {
+				border: '2px solid #ccc'
+			},
+			alt: 'Картинка'
 		}
 	},
 ];
