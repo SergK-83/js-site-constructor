@@ -1,21 +1,5 @@
 import {model} from './model';
-import {Site} from "./classes/site";
 import './styles/main.css';
-import {Sidebar} from "./classes/sidebar";
+import {App} from "./classes/app";
 
-// const $site = document.getElementById('site');
-
-// model.forEach(block => {
-// 	$site.insertAdjacentHTML('beforeend', block.toHTML());
-// });
-
-const site = new Site('#site');
-
-site.render(model);
-
-const updateCallback = newBlock => {
-	model.push(newBlock);
-	site.render(model);
-}
-
-const sidebar = new Sidebar('#panel', updateCallback);
+new App(model).init();

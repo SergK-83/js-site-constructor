@@ -32,6 +32,8 @@ export class Sidebar {
 			? new TextBlock(value, {styles})
 			: new TitleBlock(value, {styles});
 
+		console.log(newBlock);
+
 		this.update(newBlock);
 
 		event.target.value.value = '';

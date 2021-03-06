@@ -29,12 +29,12 @@ export const model = [
 	}),
 	new ImageBlock(image, {
 		styles: {
-			display: 'flex',
-			'justify-content': 'center',
+			'text-align': 'center',
 			padding: '1rem'
 		},
 		stylesImg: {
-			border: '2px solid #ccc'
+			width: '80%',
+			border: '2px solid #ccc',
 		},
 		alt: 'Картинка'
 	})
